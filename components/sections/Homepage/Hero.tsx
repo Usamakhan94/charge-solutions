@@ -25,10 +25,10 @@ const Hero = () => {
             </div>
             <div className="flex gap-4">
               <Button asChild>
-                <Link href="/contact">Get Started</Link>
+                <Link href="/contact">Get a Quote</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/contact">Get Started</Link>
+                <Link href="/contact">See How It Works</Link>
               </Button>
             </div>
           </div>
