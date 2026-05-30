@@ -11,7 +11,17 @@ const QualityMarquee = () => {
   ];
   return (
     <section className="py-8 bg-primary">
-      <Marquee items={marqueeIems} />
+      <Marquee
+        minGap={24}
+        items={marqueeIems.map((item, index) => (
+          <span
+            className="text-white text-body pl-4.5 relative isolate before:absolute before:w-2 before:h-2 before:left-0 before:top-1/2 before:-translate-y-1/2 before:bg-white"
+            key={index + 1}
+          >
+            {item}
+          </span>
+        ))}
+      />
     </section>
   );
 };

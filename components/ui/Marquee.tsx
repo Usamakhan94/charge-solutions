@@ -134,34 +134,22 @@ export default function Marquee({
       const singleW = single.getBoundingClientRect().width;
       const containerW = container.getBoundingClientRect().width;
 
-      // Compute how many copies needed to always overfill by at least 2×
-      // so both forward and backward directions never show empty space.
-      // minimum 3 copies: one off-left, one visible, one off-right.
       const copies = Math.max(3, Math.ceil((containerW * 2) / singleW) + 1);
 
-      // The gap between the LAST item of one copy and FIRST of the next
-      // must match the gap inside copies. We achieve this by using a single
-      // flat flex row — gap is uniform between every sibling.
-      // Actual loop width = singleW + one gap (the seam gap).
-      // We compute this from the DOM after rendering.
       const computedGap = Math.max(
         minGap,
         Math.min(gap, containerW / items.length),
       );
 
-      // Re-render with the right number of copies and gap
-      // We store these on the track via data attrs to avoid a re-render loop
       track.style.setProperty("--marquee-gap", `${computedGap}px`);
       track.dataset.copies = String(copies);
       track.dataset.ready = "0";
 
-      // Force a second rAF so the DOM has the new children
       rafId.current = requestAnimationFrame(() => {
         const children = Array.from(track.children) as HTMLElement[];
         const n = items.length; // items per copy
         if (children.length < n) return;
 
-        // Sum first copy's children widths + n gaps (seam included)
         let w = 0;
         for (let i = 0; i < n; i++) {
           w += children[i].getBoundingClientRect().width;
@@ -169,7 +157,6 @@ export default function Marquee({
         w += computedGap * n;
         loopWidth.current = w;
 
-        // Start offset: negative one copy so content is centred/visible
         x.current = -w;
         gsap.set(track, { x: -w });
         track.dataset.ready = "1";
@@ -202,8 +189,6 @@ export default function Marquee({
         const delta = gsap.ticker.deltaRatio() * (finalSpeed / 60);
 
         x.current -= delta * direction.current;
-
-        // Jitter-free modulo — always lands in (-loopWidth, 0]
         const w = loopWidth.current;
         x.current = ((x.current % w) + w) % w;
         if (x.current > 0) x.current -= w;
@@ -221,15 +206,11 @@ export default function Marquee({
     };
   }, [speed, gap, minGap, items.length]);
 
-  // Derive copies count for render — default 3, updated by init() via dataset
-  // We render a fixed 6 copies upfront; init() will trim via CSS if needed.
-  // Simpler: just render enough copies always (6 is safe for any screen).
   const COPIES = 6;
   const repeated = Array.from({ length: COPIES }, () => items).flat();
 
   return (
     <div ref={containerRef} className={`overflow-hidden w-full ${className}`}>
-      {/* Single-copy ghost used only to measure one copy's natural width */}
       <div
         ref={singleRef}
         className="flex w-max absolute opacity-0 pointer-events-none top-0 left-0"
