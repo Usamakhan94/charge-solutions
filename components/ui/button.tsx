@@ -10,9 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground min-w-[184px] bg-radial from-[#5B901E] to-[#86CD33] border-[#86CD33] before:absolute before:bg-gradient-to-r before:from-[#5B901E] before:to-[#86CD33]  before:-top-[12px] before:w-[50px] before:h-full before:-right-[8px] before:-rotate-45 before:-z-10 before:blur-[8px]",
+          "bg-primary text-primary-foreground min-w-[184px] bg-radial from-[#5B901E] to-[#86CD33] border-[#86CD33] shadow-[inset_0_0px_0px_0px_rgba(255,255,255,1)] hover:shadow-[inset_0px_-60px_0px_0px_rgba(255,255,255,1)] hover:text-primary",
+        // "bg-primary text-primary-foreground min-w-[184px] bg-radial from-[#5B901E] to-[#86CD33] border-[#86CD33] before:absolute before:bg-gradient-to-r before:from-[#5B901E] before:to-[#86CD33]  before:-top-[12px] before:w-[50px] before:h-full before:-right-[8px] before:-rotate-45 before:-z-10 before:blur-[8px]",
         outline:
-          "text-white border-primary bg-background dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+          "text-white border-primary bg-background dark:border-input dark:bg-input/30 dark:hover:bg-input/50 shadow-[inset_0_0px_0px_0px_rgba(91,144,30,1)] hover:shadow-[inset_0px_-60px_0px_0px_rgba(91,144,30,1)]",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:

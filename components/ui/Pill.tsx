@@ -46,7 +46,7 @@ const Pill = ({
 
   return (
     <div className={`flex items-center ${alignmentMap[alignment]}`}>
-      <h6 className="text-body text-primary relative isolate w-fit">
+      <h6 className="text-body text-accent relative isolate w-fit">
         {textContent}
         <span
           ref={spanRef}
