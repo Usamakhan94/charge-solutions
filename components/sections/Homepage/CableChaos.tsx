@@ -1,4 +1,5 @@
 "use client";
+import TextReveal from "@/components/ui/TextReveal";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Draggable, ScrollTrigger } from "gsap/all";
@@ -137,7 +138,9 @@ const CableChaos = () => {
       <div className="container">
         <div className="max-w-208 mx-auto mb-20 flex flex-col gap-6">
           <h2 className="text-3xl text-center text-white">
-            End The <span className="text-accent">Cable Chaos</span>
+            <TextReveal>
+              End The <span className="text-accent">Cable Chaos</span>
+            </TextReveal>
           </h2>
           <p className="text-white/80 text-body text-center">
             Charging tablets in the field should never mean tangled cords, dead
