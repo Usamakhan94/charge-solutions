@@ -27,7 +27,6 @@ const CTA = () => {
           start: "top center",
           end: "bottom center",
           toggleActions: "play reverse play reverse",
-          markers: true,
         },
       });
 
