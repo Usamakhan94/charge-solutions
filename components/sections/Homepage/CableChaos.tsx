@@ -41,8 +41,9 @@ const CableChaos = () => {
           scrollTrigger: {
             trigger: glowLine,
             start: "top 90%",
-            end: "top 60%",
+            end: "top 10%",
             scrub: false,
+            toggleActions: "play reverse play reverse",
           },
         },
       );
@@ -63,6 +64,37 @@ const CableChaos = () => {
             clipPath: `inset(0 ${containerWidth - x}px 0 0)`,
           });
         },
+      });
+      const triggerWiggle = () => {
+        gsap.to(handle, {
+          keyframes: {
+            x: [
+              startX,
+              startX - 30,
+              startX + 30,
+              startX - 20,
+              startX + 20,
+              startX - 5,
+              startX + 5,
+              startX,
+            ],
+          },
+          duration: 2,
+          ease: "power1.inOut",
+          onUpdate: function () {
+            const x = gsap.getProperty(handle, "x") as number;
+            gsap.set(before, {
+              clipPath: `inset(0 ${containerWidth - x}px 0 0)`,
+            });
+          },
+        });
+      };
+
+      ScrollTrigger.create({
+        trigger: handle,
+        start: "top 90%",
+        onEnter: triggerWiggle,
+        onEnterBack: triggerWiggle,
       });
       gsap.fromTo(
         blobWrapper,

@@ -12,6 +12,7 @@ const QualityMarquee = () => {
   return (
     <section className="py-8 bg-primary">
       <Marquee
+        minGaee
         minGap={24}
         items={marqueeIems.map((item, index) => (
           <span

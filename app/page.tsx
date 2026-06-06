@@ -1,5 +1,7 @@
 import BrandElevation from "@/components/sections/Homepage/BrandElevation";
 import CableChaos from "@/components/sections/Homepage/CableChaos";
+import Contact from "@/components/sections/Homepage/Contact";
+import CTA from "@/components/sections/Homepage/CTA";
 import DockCore from "@/components/sections/Homepage/DockCore";
 import Hero from "@/components/sections/Homepage/Hero";
 import Mission from "@/components/sections/Homepage/Mission";
@@ -20,7 +22,8 @@ export default function Home() {
       <ProductDetailsSlider />
       <Mission />
       <BrandElevation />
-      <section className="min-h-screen"></section>
+      <Contact />
+      <CTA />
     </>
   );
 }

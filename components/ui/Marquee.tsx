@@ -130,7 +130,6 @@ export default function Marquee({
     let ctx: gsap.Context | null = null;
 
     const init = () => {
-      // Measure one copy's rendered width (items + their gaps)
       const singleW = single.getBoundingClientRect().width;
       const containerW = container.getBoundingClientRect().width;
 
@@ -147,7 +146,7 @@ export default function Marquee({
 
       rafId.current = requestAnimationFrame(() => {
         const children = Array.from(track.children) as HTMLElement[];
-        const n = items.length; // items per copy
+        const n = items.length;
         if (children.length < n) return;
 
         let w = 0;
@@ -176,7 +175,8 @@ export default function Marquee({
       const delta = curr - lastScroll;
       lastScroll = curr;
       velocity.current = gsap.utils.interpolate(velocity.current, delta, 0.2);
-      direction.current = delta >= 0 ? 1 : -1;
+      // direction.current = delta >= 0 ? 1 : -1;
+      direction.current = 1;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
 

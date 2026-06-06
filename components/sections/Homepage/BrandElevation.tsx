@@ -36,7 +36,7 @@ const BrandElevation = () => {
       >
         <div
           ref={imageContainer}
-          className="rounded-[1.25rem] relative overflow-hidden w-[60%] h-[calc(100vh_-_80px)] flex justify-center items-center"
+          className="rounded-[1.25rem] relative overflow-hidden w-[60%] h-[calc(100vh-80px)] flex justify-center items-center"
         >
           <Image
             src={"/elevate-img.png"}

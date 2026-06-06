@@ -53,8 +53,13 @@ const Mission = () => {
             {features.map((feature, index) => (
               <div
                 key={index + 1}
-                className="bg-secondary py-21.5 px-9 [corner-shape:bevel] rounded-[0px] hover:rounded-[40px] flex flex-col gap-4 transition-all"
+                className="relative isolate overflow-hidden bg-secondary group py-21.5 px-9 [corner-shape:bevel] rounded-[40px] flex flex-col gap-4 transition-all"
               >
+                <div className="absolute isolate -top-70 group-hover:scale-100 scale-0 transition-transform duration-500 left-1/2 -translate-x-1/2 w-full h-137.5 -z-10 will-change-transform">
+                  <div className="absolute max-w-[50%] w-full h-137.5 left-1/2 -translate-x-1/2 bg-radial from-[#019A4A] via-[#8BC34A] to-[#05080B00] rounded-[80%] blur-[150px] -z-30 opacity-60 will-change-transform" />
+                  <div className="absolute max-w-[30%] w-full h-25 left-1/2 bottom-1/2 translate-y-1/2 -translate-x-1/2 bg-[#FFFFFF33] rounded-[80%] blur-[100px] -z-20 will-change-transform" />
+                  <div className="absolute max-w-[25%] w-full h-5 left-1/2 bottom-1/2 translate-y-1/2 -translate-x-1/2 bg-white rounded-[80%] blur-[10px] -z-10 will-change-transform" />
+                </div>
                 {feature.icons}
                 <h5 className="text-lg uppercase text-white leading-none">
                   {feature.title}
