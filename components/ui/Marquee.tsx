@@ -104,7 +104,7 @@ interface MarqueeProps {
 
 export default function Marquee({
   items,
-  speed = 100,
+  speed = 50,
   gap = 40,
   minGap = 16,
   className = "",
@@ -197,7 +197,7 @@ export default function Marquee({
 
         gsap.set(track, { x: x.current });
         velocity.current = 0;
-        // velocity.current *= 0.92;  
+        // velocity.current *= 0.92;
       });
     });
 
