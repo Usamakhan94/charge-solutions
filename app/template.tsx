@@ -3,6 +3,7 @@ import Header from "@/components/general/Header";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import Footer from "../components/general/Footer";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const maskRef = useRef<HTMLDivElement>(null);
@@ -87,6 +88,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         </div>
         {children}
       </main>
+      <Footer />
     </>
   );
 }
