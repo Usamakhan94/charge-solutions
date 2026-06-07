@@ -47,12 +47,12 @@ const CTA = () => {
   );
 
   return (
-    <section ref={sectionRef} className="py-37.5">
+    <section ref={sectionRef} className="md:py-37.5 sm:py-20 py-10 px-4">
       <div className="container">
-        <div className="bg-white/4 border border-white/4 backdrop-blur-[110px] py-41.25 rounded-[20px] relative isolate overflow-hidden">
+        <div className="bg-white/4 border border-white/4 backdrop-blur-[110px] sm:py-41.25 py-16 rounded-[20px] relative isolate overflow-hidden">
           <div
             ref={chevronLeftRef}
-            className="absolute -z-10 top-0 left-0 h-full translate-x-1/2"
+            className="absolute -z-10 top-0 left-0 h-full"
           >
             <Image
               className="h-full object-cover"
@@ -65,7 +65,7 @@ const CTA = () => {
 
           <div
             ref={chevronRightRef}
-            className="rotate-180 absolute -z-10 top-0 right-0 h-full translate-x-1/2"
+            className="rotate-180 absolute -z-10 top-0 right-0 h-full"
           >
             <Image
               className="h-full object-cover"
@@ -77,7 +77,7 @@ const CTA = () => {
           </div>
 
           <div className="flex flex-col justify-center items-center gap-7.5">
-            <h2 className="text-3xl text-center text-white">
+            <h2 className="sm:text-3xl text-2xl text-center text-white">
               <TextReveal>
                 Secure. <span className="text-accent">Charge.</span> Deploy
               </TextReveal>

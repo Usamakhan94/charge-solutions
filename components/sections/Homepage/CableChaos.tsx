@@ -162,14 +162,14 @@ const CableChaos = () => {
   );
 
   return (
-    <section className="relative isolate">
+    <section className="relative isolate px-4">
       <div
         ref={glowLineRef}
-        className="absolute -z-10 w-full h-1.25 bg-accent bottom-61.5 pointer-events-none left-0 blur-[2px] shadow-[0_0_38px_5px_rgba(196,255,127,0.5)]"
+        className="absolute -z-10 w-full h-1.25 bg-accent xl:bottom-61.5 sm:bottom-52 bottom-32 pointer-events-none left-0 blur-[2px] shadow-[0_0_38px_5px_rgba(196,255,127,0.5)]"
       />
       <div className="container">
-        <div className="max-w-208 mx-auto mb-20 flex flex-col gap-6">
-          <h2 className="text-3xl text-center text-white">
+        <div className="max-w-208 mx-auto sm:mb-20 mb-10 flex flex-col gap-6">
+          <h2 className="sm:text-3xl text-xl text-center text-white">
             <TextReveal>
               End The <span className="text-accent">Cable Chaos</span>
             </TextReveal>
@@ -182,30 +182,27 @@ const CableChaos = () => {
           </p>
         </div>
 
-        <div className="bg-secondary rounded-[10px] p-6.75">
+        <div className="bg-secondary sm:rounded-[10px] rounded-[15px] sm:p-6.75 p-3.75">
           <div
             ref={containerRef}
-            className="relative isolate rounded-[15px] overflow-hidden min-h-123"
+            className="relative isolate sm:rounded-[15px] rounded-[8px] overflow-hidden xl:min-h-123 sm:min-h-87.5 min-h-62.5"
           >
-            <div className="flex justify-between items-center w-full p-7 absolute top-0 left-0 pointer-events-none z-10">
-              <span className="text-white text-body font-sans py-3.75 px-5 rounded-[10px] bg-[#FF383C]">
-                BEFORE
-              </span>
-              <span className="text-white text-body font-sans py-3.75 px-5 rounded-[10px] bg-accent">
-                AFTER
-              </span>
-            </div>
-
             <Image
               src={"/comparison-images/after-img.png"}
               alt=""
               fill
-              className="object-cover"
+              className="object-cover -z-20"
             />
+            <span className="absolute top-0 right-0 -z-10 sm:m-7 m-3.5 text-white sm:text-body text-[12px] font-sans sm:py-3.75 py-2.5 sm:px-5 px-3 sm:rounded-[10px] rounded-[6px] bg-accent">
+              AFTER
+            </span>
             <div
               ref={beforeRef}
               className="absolute inset-0 will-change-[clip-path]"
             >
+              <span className="absolute top-0 left-0 z-10 sm:m-7 m-3.5 text-white sm:text-body text-[12px] font-sans sm:py-3.75 py-2.5 sm:px-5 px-3 sm:rounded-[10px] rounded-[6px] bg-[#FF383C]">
+                BEFORE
+              </span>
               <Image
                 src={"/comparison-images/before-img.png"}
                 alt=""

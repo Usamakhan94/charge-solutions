@@ -37,9 +37,8 @@ export default function ProductCard({ products }: ProductCardProps) {
 
   useGSAP(
     () => {
+      if (window.innerWidth <= 1023) return;
       const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
-
-      // Track only this component's triggers — never touch other page triggers
       const ownTriggers: ScrollTrigger[] = [];
 
       function killOwnTriggers() {
@@ -78,7 +77,6 @@ export default function ProductCard({ products }: ProductCardProps) {
       const onResize = () => {
         clearTimeout(resizeTimeout);
 
-        // Only reset cards this component owns
         killOwnTriggers();
         cards.forEach((card) => {
           gsap.set(card, { scale: 1, filter: "blur(0px)" });
@@ -103,14 +101,17 @@ export default function ProductCard({ products }: ProductCardProps) {
   );
 
   return (
-    <div className="flex flex-col gap-14.75 mt-20" ref={containerRef}>
+    <div
+      className="flex flex-col sm:gap-14.75 gap-8 sm:mt-20 mt-10"
+      ref={containerRef}
+    >
       {products.map((product, i) => (
         <div
           key={i}
           ref={(el) => {
             cardRefs.current[i] = el;
           }}
-          className="sticky top-10"
+          className="lg:sticky top-10"
           style={{
             zIndex: i + 1,
             willChange: "transform, filter",
@@ -121,33 +122,35 @@ export default function ProductCard({ products }: ProductCardProps) {
           }}
         >
           <div
-            className={`bg-secondary p-25 flex ${i % 2 == 0 ? "flex-row" : "flex-row-reverse"} items-center justify-between gap-16 rounded-tl-[64px] [corner-shape:bevel]`}
+            className={`bg-secondary xl:p-25 sm:p-14 p-6 pt-8 flex ${i % 2 == 0 ? "md:flex-row flex-col" : "md:flex-row-reverse flex-col"} items-center justify-between lg:gap-16 gap-6 sm:rounded-tl-[64px] rounded-tl-[42px] [corner-shape:bevel]`}
           >
-            <div className="flex flex-col gap-20">
-              <div className="flex flex-col gap-7.5">
-                <h3 className="text-xl text-white">
+            <div className="flex flex-col xl:gap-20 lg:gap-10 gap-5">
+              <div className="flex flex-col lg:gap-7.5 gap-3">
+                <h3 className="lg:text-xl text-2xl text-white">
                   <span className="text-accent">0{i + 1}</span> {product.title}
                 </h3>
-                <p className="text-body text-white/60">{product.desc}</p>
+                <p className="sm:text-body text-sm text-white/60">
+                  {product.desc}
+                </p>
               </div>
 
-              <div className="border-t border-white/20 pt-12.5 flex flex-col gap-5">
+              <div className="border-t border-white/20 lg:pt-12.5 pt-6 flex flex-col sm:gap-5 gap-3">
                 {product.features.map((feat) => (
                   <div
                     key={feat.label}
                     className="flex justify-between items-center"
                   >
-                    <span className="text-white/60 font-sans uppercase text-body leading-none">
+                    <span className="text-white/60 font-sans uppercase sm:text-body text-sm leading-none">
                       {feat.label}
                     </span>
-                    <span className="text-white font-sans font-medium uppercase text-body leading-none">
+                    <span className="text-white font-sans font-medium uppercase sm:text-body text-sm leading-none">
                       {feat.value}
                     </span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-[#D9D9D9] p-11.75 relative isolate min-w-md flex justify-center items-center h-full min-h-113.25">
+            <div className="bg-[#D9D9D9] xl:p-11.75 p-4 relative isolate xl:min-w-md md:min-w-[320px] min-w-full flex justify-center items-center h-full min-h-113.25">
               <Image
                 src={`/product-line/${product.image.src}`}
                 alt={product.image.alt}

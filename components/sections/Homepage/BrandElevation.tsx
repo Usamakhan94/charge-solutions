@@ -47,7 +47,7 @@ const BrandElevation = () => {
           />
           <Button
             variant="ghost"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full p-0! w-18.5 h-18.5 shadow-none! bg-transparent! [&_svg]:w-full! [&_svg]:h-full!"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full p-0! sm:w-18.5 w-14 sm:h-18.5 h-14 shadow-none! bg-transparent! [&_svg]:w-full! [&_svg]:h-full!"
           >
             <PlayButtonIcon />
           </Button>

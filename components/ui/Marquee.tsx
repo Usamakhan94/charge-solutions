@@ -129,6 +129,8 @@ export default function Marquee({
 
     let ctx: gsap.Context | null = null;
 
+    track.style.visibility = "visible";
+
     const init = () => {
       const singleW = single.getBoundingClientRect().width;
       const containerW = container.getBoundingClientRect().width;
@@ -210,7 +212,10 @@ export default function Marquee({
   const repeated = Array.from({ length: COPIES }, () => items).flat();
 
   return (
-    <div ref={containerRef} className={`overflow-hidden w-full ${className}`}>
+    <div
+      ref={containerRef}
+      className={`overflow-hidden w-full relative  ${className}`}
+    >
       <div
         ref={singleRef}
         className="flex w-max absolute opacity-0 pointer-events-none top-0 left-0"
@@ -230,7 +235,7 @@ export default function Marquee({
       <div
         ref={trackRef}
         className="flex w-max will-change-transform"
-        style={{ gap: `var(--marquee-gap, ${gap}px)` }}
+        style={{ gap: `var(--marquee-gap, ${gap}px)`, visibility: "hidden" }}
       >
         {repeated.map((item, i) => (
           <div

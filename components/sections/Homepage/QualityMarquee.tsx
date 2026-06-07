@@ -10,7 +10,7 @@ const QualityMarquee = () => {
     "POWER + DATA + VIDEO",
   ];
   return (
-    <section className="py-8 bg-primary">
+    <section className="md:py-8 py-6 bg-primary overflow-hidden">
       <Marquee
         minGap={24}
         items={marqueeIems.map((item, index) => (

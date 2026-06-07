@@ -38,11 +38,11 @@ const Partners = () => {
     },
   ];
   return (
-    <section className="py-37.5">
+    <section className="md:py-37.5 sm:py-20 py-10">
       <div className="container">
         <Pill alignment="center" textContent="AUTHORIZED MISSION PARTNERS" />
         <Marquee
-          className="[&_>div]:items-center mt-24"
+          className="[&_>div]:items-center md:mt-24 sm:mt-18 mt-8"
           gap={140}
           minGap={32}
           items={partnersLogos.map((item, index) => (

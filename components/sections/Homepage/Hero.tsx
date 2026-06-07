@@ -5,12 +5,12 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="py-50">
+    <section className="md:py-50 pb-20 pt-32 px-4">
       <div className="container">
-        <div className="grid grid-cols-2 items-center gap-16">
+        <div className="grid lg:grid-cols-2 items-center 2xl:gap-16 gap-8">
           <div className="flex flex-col gap-7.5">
             <div className="flex flex-col gap-5">
-              <h1 className=" text-3xl text-white ">
+              <h1 className=" sm:text-3xl text-xl text-white ">
                 <TextReveal>
                   <>
                     We <span className="text-accent">Solve</span> Complex Cable
@@ -18,12 +18,12 @@ const Hero = () => {
                   </>
                 </TextReveal>
               </h1>
-              <p className="text-body text-white/80 max-w-123.75">
+              <p className="sm:text-body text-sm text-white/80 max-w-123.75">
                 From cable chaos and lost chargers to secure, mission-ready
                 DOCK-CORE systems built for high-demand environments.
               </p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <Button asChild>
                 <Link href="/contact">Get a Quote</Link>
               </Button>
@@ -38,7 +38,7 @@ const Hero = () => {
               width={546}
               height={506}
               alt="Package"
-              className="ml-auto "
+              className="lg:ml-auto "
             />
           </div>
         </div>

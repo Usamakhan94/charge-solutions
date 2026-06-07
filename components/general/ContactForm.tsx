@@ -27,7 +27,7 @@ const ALL_COUNTRIES = getCountryDataList()
     code: c.iso2,
     name: c.name,
     dial: `+${c.phone[0]}`,
-    // flag: getEmojiFlag(c.iso2),
+    flag: getEmojiFlag(c.iso2),
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -90,7 +90,10 @@ function CountrySelector({
         onClick={() => setOpen((o) => !o)}
         className="flex items-center gap-1.5 px-3 py-2 rounded-md bg-[#3c4049] border border-transparent text-[#c8cdd6] text-sm whitespace-nowrap w-full hover:bg-[#444952] transition-colors focus:outline-none"
       >
-        <span className="truncate">
+        <span className="text-base leading-none uppercase sm:hidden inline-block">
+          {selected.flag} ({selected.dial})
+        </span>
+        <span className="truncate sm:inline-block hidden">
           {selected.name} ({selected.dial})
         </span>
         <svg
@@ -111,7 +114,7 @@ function CountrySelector({
       </button>
 
       {open && (
-        <div className="absolute top-[calc(100%+4px)] left-0 z-50 bg-[#2e3039] border border-[#4a4d57] rounded-md w-64 shadow-xl overflow-hidden">
+        <div className="absolute top-[calc(100%+4px)] left-0 z-50 bg-[#2e3039] border border-[#4a4d57] rounded-md lg:w-64 w-42 shadow-xl overflow-hidden">
           <div className="p-2">
             <input
               autoFocus
@@ -141,6 +144,9 @@ function CountrySelector({
                     : "text-[#c8cdd6]"
                 }`}
               >
+                {/* <span className="text-base leading-none sm:hidden flex-1">
+                  {c.flag}
+                </span> */}
                 <span className="flex-1 truncate">{c.name}</span>
                 <span className="text-[#6b7280] text-xs shrink-0">
                   {c.dial}
@@ -175,7 +181,7 @@ const ContactForm = () => {
   const labelClass = " text-white! text-body font-normal";
 
   return (
-    <div className="bg-white/10 p-11.25 max-w-121 md:ml-auto">
+    <div className="bg-white/10 sm:p-11.25 p-6 lg:max-w-121 md:ml-auto">
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <FieldGroup className="gap-5">
           <Controller

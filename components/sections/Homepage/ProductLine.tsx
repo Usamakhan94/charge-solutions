@@ -57,13 +57,13 @@ const ProductLine = () => {
     },
   ];
   return (
-    <section className=" pb-37.5">
+    <section className=" md:pb-37.5 sm:pb-20 pb-10 px-4">
       <div className="container">
         <Pill
           textContent="THREE PLATFORMS. EVERY ENVIRONMENT"
           alignment="center"
         />
-        <h2 className="text-3xl text-center pt-7 text-white">
+        <h2 className="sm:text-3xl text-xl text-center pt-7 text-white">
           <TextReveal>
             Our <span className="text-accent">Product Line</span>
           </TextReveal>

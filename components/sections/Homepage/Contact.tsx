@@ -4,13 +4,13 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <section className="py-36.5 bg-secondary">
-      <div className="container grid grid-cols-2 gap-10">
-        <div className="flex flex-col gap-14.75">
-          <div className="flex flex-col gap-6.25">
-            <h2 className="text-3xl text-white">
+    <section className="xl:py-36.5 py-20 px-4 bg-secondary">
+      <div className="container grid lg:grid-cols-2 xl:gap-10 lg:gap-0 gap-6  ">
+        <div className="flex flex-col xl:gap-14.75 gap-6">
+          <div className="flex flex-col xl:gap-6.25 gap-3">
+            <h2 className="xl:text-3xl text-xl text-white">
               <TextReveal>
-                Ready To <span className="text-accent">Eliminate</span>Charging
+                Ready To <span className="text-accent">Eliminate</span> Charging
                 Chaos?
               </TextReveal>
             </h2>
@@ -19,7 +19,7 @@ const Contact = () => {
               will design a solution around your exact requirements.
             </p>
           </div>
-          <div className="flex flex-col gap-5 pl-5 border-l border-white/40 max-w-124.25">
+          <div className="flex flex-col gap-5 pl-5 border-l border-white/40 lg:max-w-124.25">
             <p className="text-white/40 text-md leading-tight">
               “After months of operating in harsh field conditions, the CSI 2000
               proved itself to be one of the most dependable pieces of equipment
