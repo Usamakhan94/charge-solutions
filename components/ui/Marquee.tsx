@@ -196,7 +196,8 @@ export default function Marquee({
         if (x.current > 0) x.current -= w;
 
         gsap.set(track, { x: x.current });
-        velocity.current *= 0.92;
+        velocity.current = 0;
+        // velocity.current *= 0.92;  
       });
     });
 

@@ -72,7 +72,7 @@ const Header = () => {
               </Button>
             </SheetContent>
           </Sheet>
-        </div>
+        </div>  
       </div>
     </header>
   );
