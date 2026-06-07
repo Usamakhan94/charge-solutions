@@ -124,7 +124,7 @@ export default function ProductCard({ products }: ProductCardProps) {
           <div
             className={`bg-secondary 2xl:p-25 xl:p-10 sm:p-14 p-6 pt-8 flex ${i % 2 == 0 ? "md:flex-row flex-col" : "md:flex-row-reverse flex-col"} items-center justify-between lg:gap-16 gap-6 sm:rounded-tl-[64px] rounded-tl-[42px] [corner-shape:bevel]`}
           >
-            <div className="flex flex-col xl:gap-20 lg:gap-10 gap-5">
+            <div className="flex flex-col 2xl:gap-20 xl:gap-10 gap-5">
               <div className="flex flex-col lg:gap-7.5 gap-3">
                 <h3 className="lg:text-xl text-[1.5625rem] text-white">
                   <span className="text-accent">0{i + 1}</span> {product.title}
