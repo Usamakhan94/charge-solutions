@@ -435,3 +435,29 @@ export function PlayButtonIcon({ color }: IconProps) {
     </svg>
   );
 }
+
+export function MenuIcon({ color }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="28"
+      fill="none"
+      viewBox="0 0 30 28"
+    >
+      <g
+        stroke="#8BC34A"
+        strokeLinecap="round"
+        strokeWidth="2"
+        clipPath="url(#clip0_497_159)"
+      >
+        <path d="M1 1h28M1 14h18M1 27h28"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_497_159">
+          <path fill="#fff" d="M0 0h30v28H0z"></path>
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}

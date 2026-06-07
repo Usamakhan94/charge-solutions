@@ -126,10 +126,10 @@ export default function ProductCard({ products }: ProductCardProps) {
           >
             <div className="flex flex-col xl:gap-20 lg:gap-10 gap-5">
               <div className="flex flex-col lg:gap-7.5 gap-3">
-                <h3 className="lg:text-xl text-2xl text-white">
+                <h3 className="lg:text-xl text-[1.5625rem] text-white">
                   <span className="text-accent">0{i + 1}</span> {product.title}
                 </h3>
-                <p className="sm:text-body text-sm text-white/60">
+                <p className="sm:text-body text-md text-white/60">
                   {product.desc}
                 </p>
               </div>

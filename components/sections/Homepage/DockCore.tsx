@@ -36,12 +36,12 @@ const DockCore = () => {
       <div className="container">
         <Pill textContent="CONNECT. DEPLOY. MISSION-READY" />
         <div className="grid lg:grid-cols-2 lg:gap-15 gap-6 pt-7.5 pb-15">
-          <h2 className="sm:text-3xl text-xl text-white">
+          <h2 className="sm:text-3xl text-2xl text-white">
             <TextReveal>
               Meet <span className="text-accent">DOCK-CORE</span>
             </TextReveal>
           </h2>
-          <p className="text-white/80 text-body md:max-w-149">
+          <p className="text-white/80 sm:text-body text-md md:max-w-149">
             DOCK-CORE is CSI’s proprietary device readiness ecosystem engineered
             to eliminate cable chaos and transform how organizations{" "}
             <span className="text-accent">dock, secure, charge,</span> and
@@ -71,7 +71,9 @@ const DockCore = () => {
                 <h5 className="text-lg uppercase text-white leading-none">
                   {feature.title}
                 </h5>
-                <p className="text-white/60 text-body">{feature.desc}</p>
+                <p className="text-white/60 sm:text-body text-md">
+                  {feature.desc}
+                </p>
               </div>
             ))}
           </div>

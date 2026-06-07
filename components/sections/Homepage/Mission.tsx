@@ -36,13 +36,13 @@ const Mission = () => {
         <div className="grid lg:grid-cols-2 lg:gap-15 gap-6 sm:pt-7.5 pb-15">
           <div className="flex flex-col gap-7.5">
             <Pill textContent="WHO WE SERVE" />
-            <h2 className="sm:text-3xl text-xl text-white leading-none">
+            <h2 className="sm:text-3xl text-2xl text-white leading-none">
               <TextReveal>
                 Mission - Ready <br />
                 Across <span className="text-accent"> Industries</span>
               </TextReveal>
             </h2>
-            <p className="text-white/80 text-body md:max-w-149">
+            <p className="text-white/80 sm:text-body text-md md:max-w-149">
               From military deployment and federal operations to enterprise
               infrastructure, <span className="text-accent">DOCK-CORE</span>{" "}
               systems deliver secure, mission-ready device operations in the
@@ -64,7 +64,9 @@ const Mission = () => {
                 <h5 className="text-lg uppercase text-white leading-none">
                   {feature.title}
                 </h5>
-                <p className="text-white/60 text-body">{feature.desc}</p>
+                <p className="text-white/60 sm:text-body text-md">
+                  {feature.desc}
+                </p>
               </div>
             ))}
           </div>

@@ -49,7 +49,7 @@ const CTA = () => {
   return (
     <section ref={sectionRef} className="md:py-37.5 sm:py-20 py-10 px-4">
       <div className="container">
-        <div className="bg-white/4 border border-white/4 backdrop-blur-[110px] sm:py-41.25 py-16 rounded-[20px] relative isolate overflow-hidden">
+        <div className="bg-white/4 border border-white/4 backdrop-blur-[110px] sm:py-41.25 py-16 px-6 rounded-[20px] relative isolate overflow-hidden">
           <div
             ref={chevronLeftRef}
             className="absolute -z-10 top-0 left-0 h-full"
@@ -82,7 +82,7 @@ const CTA = () => {
                 Secure. <span className="text-accent">Charge.</span> Deploy
               </TextReveal>
             </h2>
-            <p className="text-body font-medium text-white">
+            <p className="text-center sm:text-body text-md font-medium text-white">
               Build a mission-ready device ecosystem.
             </p>
             <Button variant="outline" asChild className="uppercase">

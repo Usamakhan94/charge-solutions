@@ -8,19 +8,19 @@ const Contact = () => {
       <div className="container grid lg:grid-cols-2 xl:gap-10 lg:gap-0 gap-6  ">
         <div className="flex flex-col xl:gap-14.75 gap-6">
           <div className="flex flex-col xl:gap-6.25 gap-3">
-            <h2 className="xl:text-3xl text-xl text-white">
+            <h2 className="xl:text-3xl text-2xl text-white">
               <TextReveal>
                 Ready To <span className="text-accent">Eliminate</span> Charging
                 Chaos?
               </TextReveal>
             </h2>
-            <p className="text-white/80 text-body font-medium max-w-123.5">
+            <p className="text-white/80 sm:text-body text-md font-medium max-w-123.5">
               Tell us about your fleet, your environment, and your timeline. CSI
               will design a solution around your exact requirements.
             </p>
           </div>
           <div className="flex flex-col gap-5 pl-5 border-l border-white/40 lg:max-w-124.25">
-            <p className="text-white/40 text-md leading-tight">
+            <p className="text-white/40 sm:text-md text-sm leading-tight">
               “After months of operating in harsh field conditions, the CSI 2000
               proved itself to be one of the most dependable pieces of equipment
               in our deployment setup. From dusty transport environments to long

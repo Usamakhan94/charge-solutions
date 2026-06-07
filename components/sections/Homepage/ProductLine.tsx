@@ -63,7 +63,7 @@ const ProductLine = () => {
           textContent="THREE PLATFORMS. EVERY ENVIRONMENT"
           alignment="center"
         />
-        <h2 className="sm:text-3xl text-xl text-center pt-7 text-white">
+        <h2 className="sm:text-3xl text-2xl text-center pt-7 text-white">
           <TextReveal>
             Our <span className="text-accent">Product Line</span>
           </TextReveal>

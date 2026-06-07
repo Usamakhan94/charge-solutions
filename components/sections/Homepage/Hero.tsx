@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 items-center 2xl:gap-16 gap-8">
           <div className="flex flex-col gap-7.5">
             <div className="flex flex-col gap-5">
-              <h1 className=" sm:text-3xl text-xl text-white ">
+              <h1 className=" sm:text-3xl text-2xl text-white ">
                 <TextReveal>
                   <>
                     We <span className="text-accent">Solve</span> Complex Cable
@@ -18,7 +18,7 @@ const Hero = () => {
                   </>
                 </TextReveal>
               </h1>
-              <p className="sm:text-body text-sm text-white/80 max-w-123.75">
+              <p className="sm:text-body text-md text-white/80 max-w-123.75">
                 From cable chaos and lost chargers to secure, mission-ready
                 DOCK-CORE systems built for high-demand environments.
               </p>

@@ -169,12 +169,12 @@ const CableChaos = () => {
       />
       <div className="container">
         <div className="max-w-208 mx-auto sm:mb-20 mb-10 flex flex-col gap-6">
-          <h2 className="sm:text-3xl text-xl text-center text-white">
+          <h2 className="sm:text-3xl text-2xl text-center text-white">
             <TextReveal>
               End The <span className="text-accent">Cable Chaos</span>
             </TextReveal>
           </h2>
-          <p className="text-white/80 text-body text-center">
+          <p className="text-white/80 sm:text-body text-md text-center">
             Charging tablets in the field should never mean tangled cords, dead
             devices, or lost operational time. Our cabinets transform chaotic
             charging stations into organized, secure, networked, mission-ready
