@@ -57,7 +57,7 @@ const Footer = () => {
   return (
     <footer className="bg-background">
       <div className="container">
-        <div className="flex flex-col lg:gap-25 gap-10 pt-15 md:pb-37.5 pb-15 px-4 border-t border-white/10">
+        <div className="flex flex-col gap-10 pt-15 pb-15 px-4 border-t border-white/10">
           <div className="flex justify-between md:flex-row flex-col gap-4 ">
             <div className="flex flex-col md:gap-10 gap-4">
               <Link href="/">

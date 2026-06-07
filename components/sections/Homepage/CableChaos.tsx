@@ -70,10 +70,10 @@ const CableChaos = () => {
           keyframes: {
             x: [
               startX,
-              startX - 30,
-              startX + 30,
-              startX - 20,
-              startX + 20,
+              // startX - 30,
+              // startX + 30,
+              startX - 25,
+              startX + 25,
               startX - 5,
               startX + 5,
               startX,

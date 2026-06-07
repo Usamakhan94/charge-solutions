@@ -298,7 +298,7 @@ const ProductDetailsSlider = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-secondary h-screen overflow-hidden relative"
+      className="bg-secondary h-dvh overflow-hidden relative"
     >
       <div className="hidden md:flex absolute 2xl:left-32 xl:left-20 md:left-10 top-1/2 -translate-y-1/2 z-20 flex-col gap-3">
         {productSlides.map((_, index) => (
